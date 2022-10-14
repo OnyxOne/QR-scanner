@@ -25,7 +25,10 @@ listener.start();
 ```
 
 **startSequence:** The prefix programmed into the QR code scanner
+
 **endSequence:** The suffix programmed into the QR code scanner
+
 **onFoundValue:** The JS function that will be called after detecting a QR code scan. it receives 2 parameters: 
+
 - **value:** The raw value from the QR code
 - **self:** the instance created. Can be used to stop listening after a scan.
