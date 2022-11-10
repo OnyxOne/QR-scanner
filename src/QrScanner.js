@@ -79,7 +79,6 @@ class QRContentListener {
   }
 
   #keyUpHandler(e) {
-    console.log(e);
     if (this.#state === -1) {
       // Don't do anything when stopped
       return;
