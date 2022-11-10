@@ -69,16 +69,17 @@ class QRContentListener {
     console.log('[QRContentListener] start listening');
     this.#state = 0;
     this.#handler = this.#keyUpHandler.bind(this);
-    document.addEventListener('keyup', this.#handler);
+    document.addEventListener('keypress', this.#handler);
   }
 
   stop() {
     console.log('[QRContentListener] stop listening');
     this.#state = -1;
-    document.removeEventListener('keyup', this.#handler);
+    document.removeEventListener('keypress', this.#handler);
   }
 
   #keyUpHandler(e) {
+    console.log(e);
     if (this.#state === -1) {
       // Don't do anything when stopped
       return;
